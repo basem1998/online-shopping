@@ -1,0 +1,503 @@
+﻿@model IEnumerable<Graduation_Project.Models.Color>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+    
+
+   
+        @Html.DropDownList("Question1", ViewBag.SelectList as SelectList, "-- Select Color --", new { style = "width: 300px;" })
+
+
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+
+    </table>*@
+
+<div class="Head" style="padding:50px; margin:70px;">
+    <div style="color:black;font-size:large;text-align:center;">Chooes your Favorite Color</div>
+
+<div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+    <a href="/color/1e0f46" title="#1e0f46 color">
+        <div class="colordva" style="background-color:red; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+        
+</a>
+</div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:orange; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellow; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellowgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:green; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:forestgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumpurple; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:blue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:midnightblue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:black; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:brown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:saddlebrown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:seagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:teal; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumseagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:red; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:orange; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellow; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellowgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:green; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:forestgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumpurple; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:blue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:midnightblue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:black; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:brown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:saddlebrown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:seagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:teal; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumseagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:red; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:orange; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellow; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellowgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:green; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:forestgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumpurple; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:blue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:midnightblue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:black; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:brown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:saddlebrown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:seagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:teal; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumseagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:red; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:orange; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellow; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellowgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:green; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:forestgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumpurple; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:blue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:midnightblue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:black; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:brown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:saddlebrown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:seagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:teal; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumseagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:red; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:orange; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellow; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:yellowgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:green; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:forestgreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumpurple; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:blue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:midnightblue; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:black; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:brown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:saddlebrown; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:seagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:teal; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    <div class="colordvcon" style="width:170px;height:160px;display:inline-block;">
+        <a href="/color/1e0f46" title="#1e0f46 color">
+            <div class="colordva" style="background-color:mediumseagreen; padding-top:30px;margin:10px;width:152px;height:132px;border-color:black;border-radius: 15px 30px;"> </div>
+
+        </a>
+    </div>
+    
+    
+   
+    </div>
+
+

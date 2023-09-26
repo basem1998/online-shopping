@@ -1,0 +1,106 @@
+﻿@model Graduation_Project.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Producttype.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producttype.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.size)
+        </dd>*@
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+       </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryofOrigin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountryofOrigin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="~/Images/@Html.DisplayFor(Model=> Model.Image)"
+                 class="thumbnail"
+                 style="width:100px;height:100px;" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Add", "Edit", new { id = Model.Id },new { @class ="btn btn-warning",@style ="width:200px;"} ) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

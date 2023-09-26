@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Graduation_Project.Models.OrderItem>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2  style="text-align:center;color:teal;padding:20px;;margin:20px;">OrderItems</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.Customer.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.OrderDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order.Customer.Name)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.Product.Name)
+           </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Brand.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qty)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.Size.Name)
+            </td>
+            <td>
+                @DateTime.Now
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |              
+                @Html.ActionLink("Delete", "Delete",new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

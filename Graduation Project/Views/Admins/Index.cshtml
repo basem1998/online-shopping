@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Graduation_Project.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="text-align:center;font-size:xx-large;">Admin_Control</h2>
+<div style="padding:10px;margin:10px;">
+    @Html.ActionLink("Number_of_Order_For_Client", "countcustomerorders", "Admins", new { @class = "btn btn-danger", @style = "width:200px; border-radius: 15px 30px;width:220px;" })
+    <br>
+    @*@Html.ActionLink("Orders", "Index", "Orders", new { @class = "btn btn-danger", @style = "width:200px; border-radius: 15px 30px;" })*@
+
+
+
+
+    <a href="~/Products/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;display:">Add_Product</a>
+    <a href="~/Products/Index" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Edit_Delete_Product</a>
+    <a href="~/Brands/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Add_Brand</a>
+    <a href="~/Categories/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Add_Category</a>
+    <a href="~/SizeGroups/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Add_sizeGroup</a>
+    <a href="~/Sizes/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Add_Size</a>
+    <a href="~/Colors/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Add_Color</a>
+    <a href="~/Countries/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Add_Country</a>
+    <a href="~/Cities/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Add_City</a>
+    <a href="~/Producttypes/Create" class="btn btn-warning" style="width:180px;color:black;margin:10px;border-radius: 15px 30px;">Add_Producttype</a>
+
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.PhoneNumber)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.City)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.PhoneNumber)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.City.Name)
+            </td>
+
+            <td>
+
+                @Html.ActionLink("Details_Of_Order", "Details", new { id = item.Id }, new { @class = "btn btn-success", @style = "width:200px; border-radius: 15px 30px;" })
+
+            </td>
+        </tr>
+
+    }
+</table>
+  
+
+
+
+
+
+
+
+ 
+
+

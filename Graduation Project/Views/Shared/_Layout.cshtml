@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title> 
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+<style>
+     {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+    body {
+        color: black;      
+        background-color: white;
+        }
+    
+ </style>
+<body >
+  
+    <div  style="background-color:black;" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">         
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+                @Html.ActionLink("Shopping Online", "Index", "Home", new { area = "" }, new { @class = "navbar-brand",@style= "color:white;font-size:Large;font-size:x-large;font-style:oblique;" })
+                
+             
+            </div>
+
+            <div class="navbar-collapse collapse" style="background-color:black; color:black;">
+                <ul style="font-family:myfont;font-size:larger;" class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Suggestions", "Suggestion", "products")</li>
+
+                    <li class="dropdown">
+                        <a herf="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span>Categories</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                          
+
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="navbar-user">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p class="text-center">
+                                                <span class="glyphicon glyphicon-user img-size">
+                                                    Select_Category
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-a-center">
+                                            </p>    
+                                              
+                            <a href="~/Products/Index?Id=1"class="btn btn-warning"  style="width:180px;color:black;">Classic</a>
+                            
+                            
+                                <a href="~/Products/Index?Id=2" class="btn btn-warning" style="width:180px;color:black;">Casual</a> 
+                           
+                           
+                                <a href="~/Products/Index?Id=3" class="btn btn-warning" style="width:180px;color:black;">Meeting</a>
+                            
+                            
+                                <a href="~/Products/Index?Id=4" class="btn btn-warning" style="width:180px;color:black;">Wearing_Summer</a>
+                           
+                           
+                                <a href="~/Products/Index?Id=5" class="btn btn-warning" style="width:180px;color:black;">Wearing_Winter</a>
+
+
+                               <a href="~/Products/Index?Id=7" class="btn btn-warning" style="width:180px;color:black;">Sports</a>
+                            
+                            
+                              <a href="~/Products/Index?Id=6" class="btn btn-warning" style="width:180px;color:black;">Childreen</a>
+                                     </div>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+                    <li class="dropdown">
+
+                        <a herf="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span > Connect_With_Us</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="navbar-user">
+                                    <div class="row">
+                                        <div  class="col-lg-12">
+                                            <p class="text-center">
+                                                <span class="glyphicon glyphicon-user img-size">
+                                                    Connect_With_Us
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="text-right ">
+
+                                            </p>
+
+                                            <a href="https://www.facebook.com/" class="btn btn-primary">facebook</a>
+                                            <br>
+                                            <br>
+
+
+                                            <a  href="https://web.whatsapp.com/" class="btn btn-success">WhatsApp</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Your_Car", "CheckOut", "Orders")</li>
+                    <li>@Html.ActionLink("What is your Opinion", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Admin", "Index", "Admins")</li>
+
+
+                </ul>
+
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+   
+
+
+        @*<form id="searchMdSmOnly"
+                   " class="navbar-nav flex-row ml-md-auto d-md-flex" action="@Url.Action("Index","Products")" method="get">
+            <div  class="input-group">
+                @Html.TextBox("SearchName", null, new { @class = "form-control mr-sm-2", type = "search", placeholder = "Search",@style= "width:1000px; padding: 20px; margin: 20px; border-radius: 30px 30px; " })
+                <div class="input-group-append">
+                    <button class="btn btn-warning" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>*@
+    @*<div class="topnav">     
+        <div class="search-container">
+            <form id="searchMdSmOnly" class="navbar-nav flex-row ml-md-auto d-md-flex" action="@Url.Action("Index","Products")" method="get">
+                @Html.TextBox("SearchName", null, new { @class = "form-control mr-sm-2", type = "search", placeholder = "Search", @style = "width:2000px; padding: 20px; margin: 10px;  " })
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search">Search</button>
+            </form>
+            @*<form  id="searchMdSmOnly" class="navbar-nav flex-row ml-md-auto d-md-flex" action="@Url.Action("Index","Products")" method="get">
+                @Html.TextBox("SearchName", null, new { @class = "form-control mr-sm-2", type = "search", placeholder = "Search", @style = "width:2000px; padding: 20px; margin: 10px; border-radius: 30px 30px; " })
+                <button type="submit"><i class="fa fa-search"></i></button>
+
+            </form>
+        </div>
+    </div>*@
+
+
+    <div style="padding:10px; margin:10px;" class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto"></ul>
+        <form  class="navbar-nav flex-row ml-md-auto d-md-flex" action="@Url.Action("Index","Products")" method="get">
+            @Html.TextBox("SearchName", null, new { @class = "form-control mr-sm-2", type = "search", placeholder = "Search", @style = "width:2000px; height:45px;border-radius:15px; 30px;" })         
+            <button style="background-color:gray;border-radius:15px 15px;padding:10px;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+
+   
+
+
+   
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year جميع الحقوق محفوظة لموقع التسوق الاكترونى</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+@*<img style="position:absolute; top: 0; right: 0; border: 0;" src="~/Images/prince-ink-shirts-clothing-sales-website.png" alt="Fork me on GitHub">*@

@@ -1,0 +1,216 @@
+﻿
+@model IEnumerable< Graduation_Project.Models.Producttype>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+@*<div class="jumbotron jumbotron-fluid">
+
+    <div class="container">
+        <h1 style="text-align:center; " class="display-4">Your are Welcome</h1>
+        <p class="lead"></p>
+    </div>
+   
+</div>*@
+
+@*<img style="width:200px;height:200px;" src="~/Images/Logo page.jpg" />*@
+
+
+
+
+@*<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="~/Images/logo-search-png-4.png" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="~/Images/Suit(red).jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="~/Images/633605.jpg" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>*@
+
+
+
+@foreach (var item in Model)
+{
+  
+    <div class="panel panel-success" style="border-style:double;border-color:white; width:1200px;">
+       
+        <h1 style="text-align:center; text-decoration-style:double; background-color:gainsboro; border-radius: 15px 30px;height:50px;border-style:solid">@Html.DisplayFor(modelItem => item.Name)</h1>
+        <div style="margin:20px;" class="row">
+            @foreach (var subItem in item.Products)
+            {
+                <div class="col-md-2 thumbnail " style="margin-left:20px;width:200px;border-color:midnightblue; border-radius: 20px 20px;">
+
+                    @*<a href="~/Home/Details" class="navbar-brand">
+                        <img style="max-height:250px"; src="~/Images/shoes.png" />
+                    </a>*@
+
+                    <img style="max-height:250px;max-width:150px;" src="~/Images/@subItem.Image" />
+                   
+                    <h3><span style="font-size:larger;">Price</span>: @Html.DisplayFor(modelItem => subItem.Price)<span style="color:yellowgreen"> EGP</span></h3>                   
+                    @Html.ActionLink("Add", "Details", new { productId = subItem.Id }, new { @class = "btn btn-primary",@style= "width:190px;border-radius: 30px 30px;" })
+                    
+                </div>
+
+            }
+
+        </div>
+    
+    </div>
+        
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@{
+    ViewBag.Title = "Home Page";
+}*@
+
+@*<footer style="; 
+    padding-top:10px;
+    font-family:myfont; 
+    text-align:justify;" class="myfooter navbar navbar-fixed-bottom myfooter ">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <h3 style="color:black">
+                    <i glyphicon glyphicon-question-sign></i>
+                    who are we ?
+                </h3>
+                <p style="color:black">
+                    التسوق عبر الإنترنت هو شكل التجارة الإلكترونية التي تسمح للمستهلكين لشراء السلع أو الخدمات مباشرة من البائع عبر الإنترنت باستخدام متصفح الويب. يجد المستهلكون منتجا للاهتمام من خلال زيارة الموقع الإلكتروني لمتاجر التجزئة مباشرة أو من خلال البحث بين البائعين البديلين باستخدام محرك بحث للتسوق، والذي يعرض توفر المنتج نفسه والتسعير في مختلف تجار التجزئة الإلكترونية (B2C) التسوق عبر الإنترنت. عندما يتم تعيين متجر على شبكة الإنترنت لتمكين الشركات من شراء من شركات أخرى، وتسمى عملية الأعمال التجارية (B2B) التسوق عبر الإنترنت. متجر نموذجي على الانترنت يتيح للعميل لتصفح مجموعة من المنتجات والخدمات للشركة، عرض الصور أو الصور من المنتجات، جنبا إلى جنب مع معلومات حول مواصفات المنتج والميزات والأسعار. عادة ما تمكن المتاجر عبر الإنترنت المتسوقين من استخدام ميزات "البحث" للعثور على نماذج أو علامات تجارية أو عناصر معينة. يجب أن يكون لدى العملاء عبر الإنترنت إمكانية الدخول إلى الإنترنت وطريقة دفع صالحة لإتمام معاملة، مثل بطاقة الائتمان أو بطاقة السحب الآلي الممكنة إنتيراك أو خدمة مثل بايبال. بالنسبة للمنتجات المادية (على سبيل المثال، الكتب الورقية أو الملابس)، يقوم البائع الإلكتروني بنقل المنتجات إلى العميل؛ بالنسبة للمنتجات الرقمية، مثل الملفات الصوتية الرقمية للأغاني أو البرامج، عادة ما يرسل الخياط الإلكتروني الملف إلى العميل عبر الإنترنت. أكبر من هذه الشركات التجزئة على الانترنت هي بابا،
+                </p>
+            </div>
+            <div class="col-md-4">
+
+                <h3 style="color:black">
+                    <i glyphicon glyphicon-globe></i>
+                    Important links
+                </h3>
+                <ul style="color:black">
+
+                    <li>
+                        <a herf="#">وظائف للقطاع العام</a>
+                    </li>
+
+                    <li>
+                        <a herf="#">وظائف للقطاع الخاص</a>
+                    </li>
+                    <li>
+                        <a herf="#">وظائف خارج البلاد</a>
+                    </li>
+                    <li>
+                        <a herf="#">وظائف للقطاع متنوعة</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-4">
+
+                <h3 style="color:black">
+                    Connect with us..
+                </h3>
+                <ul style="color:black">
+
+                    <li>
+                        <a herf="#">صفحتنا على الفيس بوك</a>
+                    </li>
+                    <li>
+                        <a herf="#">تابعنا على اليوتيوب</a>
+                    </li>
+                    <li>
+                        <a herf="#">تابعنا على تويتر </a>
+                    </li>
+                    <li>
+                        <a herf="#">اترك لنا رسالة</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <div style="background-color:#0c5c82  ;
+    
+    color:white;
+    
+    padding:10px;
+    font-family:myfont;
+    text-align:center
+         ;" class="subfooter">
+        <p>جميع الحقوق محفوظة لموقع التسويق الالكترونى -2020</p>
+
+    </div>*@
+
+
+    @*<div class="jumbotron">
+            <h1>ASP.NET</h1>
+            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+            <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Getting started</h2>
+                <p>
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                    enables a clean separation of concerns and gives you full control over markup
+                    for enjoyable, agile development.
+                </p>
+                <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Get more libraries</h2>
+                <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+                <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Web Hosting</h2>
+                <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            </div>
+        </div>*@

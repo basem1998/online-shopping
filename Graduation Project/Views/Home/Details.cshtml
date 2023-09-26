@@ -1,0 +1,132 @@
+﻿@model Graduation_Project.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@using (Html.BeginForm("AddProductToOrder", "Orders", FormMethod.Post))
+{
+    <input type="hidden" name="Id" id="Id" value="@Model.Id" />
+    <input type="hidden" name="Image" id="Image" value="@Model.Image" />
+    <input type="hidden" name="Name" id="Name" value="@Model.Name" />
+    <input type="hidden" name="Price" id="Price" value="@Model.Price" />
+  
+
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.Name)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Producttype.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producttype.Name)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryofOrigin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountryofOrigin)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="~/Images/@Html.DisplayFor(Model => Model.Image)"
+                 class="thumbnail"
+                 style="width:300px;height:300px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)   EGP
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)     EGP
+        </dd>
+        <dt>
+          Size
+        </dt>
+        <dd style="height:30px;">
+            @Html.DropDownList("Productsize", TempData["Productsize"] as SelectList) 
+        </dd>
+
+    </dl>
+</div>
+<input style="margin:10px;width:190px; border-radius: 15px 30px;" name="Orderonly" type="submit"  value="Order" class="btn btn-primary" />
+<input style="margin:10px;width:190px; border-radius: 15px 30px;" name="Orderandcheckout" type="submit" value="Order" class="btn btn-primary" />
+
+}
+<p>
+  
+    @*@Html.ActionLink("Order", "AddProductToOrder", "Orders", new { id = Model.Id, Name = Model.Name, Image = Model.Image,Price = Model.Price }, new { @class = "btn btn-success" }) |*@
+    @*@Html.ActionLink("Add_and_Go_checkOut", "AddProductToOrderandCheckOut", "Orders", new { id = Model.Id, Name = Model.Name, Image = Model.Image, Price = Model.Price }, new { @class = "btn btn-success",@style= "width:190px; border-radius: 15px 30px;" }) |*@
+
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-default" })
+</p>
